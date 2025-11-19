@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env*.local
+backend/.env
+backend-api/.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+backend/goodfoods.db
+backend-api/goodfoods.db
+
+# Python virtual environment
+venv/
+env/
+ENV/
+
+# Temporary files
+*.tmp
+.cleanup_done
+
+# Build files
+*.pyc
+*.pyo
+*.egg-info/
+
+# Package manager
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Misc
+.cache/
