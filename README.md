@@ -143,9 +143,14 @@ Frontend will run on: http://localhost:3000
 #### 3. Test Integration
 
 \`\`\`bash
-# Run comprehensive tests
-python tests/test_llm_agent.py
-python tests/test_integration.py
+# Run integration tests
+python test_integration.py
+\`\`\`
+
+Expected output:
+\`\`\`
+✅ All 5 tests passed!
+🎉 Full stack integration is working!
 \`\`\`
 
 ### 🎯 Quick Test
@@ -358,31 +363,17 @@ The system includes 100 pre-populated venues:
 - **10 Cities**: New York, LA, Chicago, San Francisco, Boston, Seattle, Austin, Miami, Denver, Portland
 - **Realistic Data**: Ratings (3.8-5.0), capacities (40-200), price tiers (1-4), tags, operating hours
 
-Seed database:
+View venues:
 \`\`\`bash
 cd backend
-python seed_data.py
+python scripts/view_venues.py 20
 \`\`\`
 
 ## 🧪 Testing
 
-### Comprehensive LLM Agent Test
-\`\`\`bash
-python tests/test_llm_agent.py
-\`\`\`
-
-Tests:
-- ✅ LLM connectivity and tool calling
-- ✅ Search venues functionality
-- ✅ Get venue details
-- ✅ Check availability
-- ✅ Create reservations
-- ✅ Multi-turn conversations
-- ✅ Context awareness
-
 ### Integration Tests
 \`\`\`bash
-python tests/test_integration.py
+python test_integration.py
 \`\`\`
 
 Tests:
@@ -392,15 +383,30 @@ Tests:
 - ✅ Recommendations
 - ✅ Reservation creation
 
+### Agent Tests
+\`\`\`bash
+cd backend
+python test_agent.py
+\`\`\`
+
+Tests various conversation flows with the LLM agent.
+
+### API Tests
+\`\`\`bash
+cd backend
+python test_api.py
+\`\`\`
+
+Tests backend endpoints directly.
+
 ## 📚 Documentation
 
-- **[docs/BUSINESS_STRATEGY.md](docs/BUSINESS_STRATEGY.md)**: Complete business case, ROI analysis, market opportunity
-- **[docs/CONVERSATION_FLOWS.md](docs/CONVERSATION_FLOWS.md)**: 10 example conversation patterns
-- **[docs/AGENTIC_SYSTEM_EXPLAINED.md](docs/AGENTIC_SYSTEM_EXPLAINED.md)**: What makes this system agentic
-- **[docs/SUBMISSION_CHECKLIST.md](docs/SUBMISSION_CHECKLIST.md)**: Requirements verification
-- **[docs/LLM_AGENT_TEST_RESULTS.md](docs/LLM_AGENT_TEST_RESULTS.md)**: Test results and proof
+- **[BUSINESS_STRATEGY.md](BUSINESS_STRATEGY.md)**: Complete business case, ROI analysis, market opportunity
+- **[CONVERSATION_FLOWS.md](CONVERSATION_FLOWS.md)**: 10 example conversation patterns
+- **[INTEGRATION_GUIDE.md](INTEGRATION_GUIDE.md)**: Frontend-backend integration details
+- **[PROGRESS_SUMMARY.md](PROGRESS_SUMMARY.md)**: Implementation status and next steps
 - **[backend/QUICKSTART.md](backend/QUICKSTART.md)**: Backend setup guide
-- **[backend/EMAIL_SETUP.md](backend/EMAIL_SETUP.md)**: Email configuration guide
+- **[backend/IMPLEMENTATION_STATUS.md](backend/IMPLEMENTATION_STATUS.md)**: Technical details
 
 ## 🎯 Project Status
 
